@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0a0f2c, #1f4068);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    }
+
+    .splash {
+      text-align: center;
+      animation: fadeOut 1s ease 3s forwards; /* fades out after 3s */
+    }
+
+    .splash h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #00d4ff, #007bff);
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+      animation: fadeIn 2s ease;
+    }
+
+    .splash p {
+      font-size: 1rem;
+      color: #b0e0e6;
+      animation: fadeIn 2.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash">
+    <h1>💰 Smart Expense Tracker</h1>
+    <p>Managing your money smarter...</p>
+  </div>
+
+  <script>
+    // after 3.5 seconds, redirect to main page
+    setTimeout(() => {
+      window.location.href = "main.html";
+    }, 3500);
+  </script>
+</body>
+</html>
